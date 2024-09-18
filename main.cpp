@@ -8,7 +8,6 @@ int main(){
     std::cin >> response;
     std::cout << std::endl;
 
-    /*
     if(response == 1){
         transferMoney();
     }else if(response == 2){
@@ -24,6 +23,5 @@ int main(){
     }else{
         std::cerr << "Invalid input! \n";
     }
-    */
     return 0;
 }
