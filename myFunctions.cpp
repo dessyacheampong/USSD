@@ -4,86 +4,85 @@ void transferMoney(){
     std::cout << "(1) Airteltigo \n";
     std::cout << "(2) Vodafone \n";
     std::cout << "(3) MTN \n";
-            std::cout << "(4) E-zwich \n";
-            std::cout << "(5) Other Banks \n";
-            std::cout << "(6) G-Money \n";
-            std::cout << "(7) Zeepay \n";
-            std::cout << std::endl;
-            std::cout << std::endl;
-            std::cout << "# Back \n";
-            std::cout << "00 Main Menu \n";
+    std::cout << "(4) E-zwich \n";
+    std::cout << "(5) Other Banks \n";
+    std::cout << "(6) G-Money \n";
+    std::cout << "(7) Zeepay \n";
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "# Back \n";
+    std::cout << "00 Main Menu \n";
 
-            std::cin >> option_;
-            if(option_ == 1){
-                //Airteltigo
-                std::cout << "Enter Recipient's Number" << std::endl;
-                std::cin >> phonenum;
-                std::cout << "Confirm Recipient's Number" << std::endl;
-                std::cin >> phonenumconfirm;
-                if(phonenum==phonenumconfirm){
-                    std::cout << "Enter the amount" << std::endl;
-                    std::cin >> amount;
-                    if (amount > 99.9)
-                    {
-                        elevy=amount*0.03;
-                        std::cout << "The transfer + e-levy tax on your money is " << (amount + elevy) << std::endl;
-                        std::cout << "Enter your AirtelTigo PIN to continue: \n";
-                        std::cin >> pin;
-                        for (auto pins : codes){
-                            if ( pins == pin){
-                                std::cout << "Enter 1 to confirm or 2 to cancel \n";
-                                std::cin >> conorrej;
-                                if (conorrej == 1)
-                                {
-                                    std::cout << "The transfer has successfully been made! Continue to use AirtelTigo Money for amazing offers \n";
-                                }
-                                else if (conorrej == 2)
-                                {
-                                    std::cout << "The transfer has been cancelled. Continue to use AirtelTigo" << std::endl;
-                                }
-                                else
-                                {
-                                    std::cout << "Invalid Input!" << std::endl;
-                                }
-                            }
-                            else{
-                                std::cout << "You've entered an incorrect PIN!" << std::endl;
-                            }
+    std::cin >> option_;
+    if(option_ == 1){
+        //Airteltigo
+        std::cout << "Enter Recipient's Number" << std::endl;
+        std::cin >> phonenum;
+        std::cout << "Confirm Recipient's Number" << std::endl;
+        std::cin >> phonenumconfirm;
+        if(phonenum==phonenumconfirm){
+            std::cout << "Enter the amount" << std::endl;
+            std::cin >> amount;
+            if (amount > 99.9){
+                elevy=amount*0.03;
+                std::cout << "The transfer + e-levy tax on your money is " << (amount + elevy) << std::endl;
+                std::cout << "Enter your AirtelTigo PIN to continue: \n";
+                std::cin >> pin;
+                for (auto pins : codes){
+                    if ( pins == pin){
+                        std::cout << "Enter 1 to confirm or 2 to cancel \n";
+                        std::cin >> conorrej;
+                        if (conorrej == 1)
+                        {
+                            std::cout << "The transfer has successfully been made! Continue to use AirtelTigo Money for amazing offers \n";
                         }
-
-                    }
-                    else
-                    {
-                        std::cout << "The transfer + e-levy 0.00 is " << amount << std::endl;
-                        std::cout << "Enter your AirtelTigo Money PIN: \n";
-                        std::cin >> pin;
-                        for(auto pins : codes){
-                            if (pins == pin){
-                                std::cout << "Enter 1 to confirm or 2 to cancel the process. \n";
-                                std::cin >> conorrej;
-                                if (conorrej==1){
-                                    std::cout << "The transaction has been completed successfully! \n continue using AirtelTigo Money for amazing offers";
-                                }
-                                else if (conorrej == 2){
-                                    std::cout << "The transaction has been cancelled! \n";
-                                    std::cout << "Continue to use AirtelTigo Money for amazing offers." << std::endl;
-                                }
-                                else{
-                                    std::cout << "Invalid input! \n";
-                                }
-                            }
-                            else{
-                                std::cout << "You've entered an incorrect PIN! \n";
-                            }
+                        else if (conorrej == 2)
+                        {
+                            std::cout << "The transfer has been cancelled. Continue to use AirtelTigo" << std::endl;
+                        }
+                        else
+                        {
+                            std::cout << "Invalid Input!" << std::endl;
                         }
                     }
-
+                    else{
+                        std::cout << "You've entered an incorrect PIN!" << std::endl;
+                    }
                 }
-                else
-                {
-                    std::cout << "The numbers do not match. Please try again later! \n";
+
+            }
+            else
+            {
+                std::cout << "The transfer + e-levy 0.00 is " << amount << std::endl;
+                std::cout << "Enter your AirtelTigo Money PIN: \n";
+                std::cin >> pin;
+                for(auto pins : codes){
+                    if (pins == pin){
+                        std::cout << "Enter 1 to confirm or 2 to cancel the process. \n";
+                        std::cin >> conorrej;
+                        if (conorrej==1){
+                            std::cout << "The transaction has been completed successfully! \n continue using AirtelTigo Money for amazing offers";
+                        }
+                        else if (conorrej == 2){
+                            std::cout << "The transaction has been cancelled! \n";
+                            std::cout << "Continue to use AirtelTigo Money for amazing offers." << std::endl;
+                        }
+                        else{
+                            std::cout << "Invalid input! \n";
+                        }
+                    }
+                    else{
+                        std::cout << "You've entered an incorrect PIN! \n";
+                    }
                 }
             }
+
+        }
+        else
+        {
+            std::cout << "The numbers do not match. Please try again later! \n";
+        }
+    }
             else if (option_ == 2)
             {
                 //Vodafone
