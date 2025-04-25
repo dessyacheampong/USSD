@@ -602,7 +602,24 @@ void transferMoney(){
 }
 
 void momopay(){
+    char mpresp{};
+    std::cout << "<<<<<<<<<<<<<<<   MoMoPay & Pay Bill   >>>>>>>>>>>>>>>>>>>" << std::endl << std::endl;
+    std::cout << "1) MoMoPay\n2) Pay Bill\n3) GhQR\n4) Fuels\n5) Ghana.GOV\n0) Back" << std::endl;
+    std::cin >> mpresp;
+    if(mpresp == '1'){
+        std::cout << "Enter Merchant id/Payment Reference" << std::endl;
+        // This takes a string
+    }else if(mpresp == '2'){
 
+    }else if(mpresp == '3'){
+
+    }else if(mpresp == '4'){
+
+    }else if(mpresp == '5'){
+
+    }else if(mpresp == '0'){
+        main();
+    }
 }
 
 void airtimeBundle(){
